@@ -2,18 +2,17 @@ name: Build and Publish
 
 on:
   push:
-    branches:
-      - main
     tags:
       - "v*.*.*"
 
 permissions:
   contents: read
   id-token: write
+  pages: write
 
 jobs:
   publish:
-    name: Build and Publish to npm
+    name: Build and Publish to NPM
     runs-on: ubuntu-latest
 
     steps:
@@ -33,5 +32,35 @@ jobs:
 
       - name: Publish to npm
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_CONFIG_TOKEN }}
+          NPM_CONFIG_TOKEN: ${{ secrets.NPM_CONFIG_TOKEN }}
         run: bun publish
+
+  deploy-docs:
+    name: Generate and Deploy GitHub Pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Generate TypeDoc
+        run: bun run doc
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
