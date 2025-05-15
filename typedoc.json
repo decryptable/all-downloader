@@ -1,0 +1,20 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "searchInDocuments": true,
+  "searchInComments": true,
+  "name": "All Downloader",
+  "entryPoints": ["src/index.ts", "src/types/index.d.ts"],
+  "basePath": "src/",
+  "out": "docs",
+  "tsconfig": "tsconfig.json",
+  "entryPointStrategy": "expand",
+  "readme": "README.md",
+  "jsDocCompatibility": true,
+  "titleLink": "https://github.com/decryptable/all-downloader",
+  "cleanOutputDir": true,
+  "hideGenerator": true,
+  "githubPages": true,
+  "plugin": ["typedoc-plugin-missing-exports", "typedoc-material-theme"],
+  "includeVersion": true,
+  "customFooterHtml": "<p>Made with ♡ by <a href=\"https://github.com/decryptable\" target=\"_blank\">@decryptable</a></p>"
+}
