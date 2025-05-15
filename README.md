@@ -1,5 +1,10 @@
 ![All Downloader](./examples/demo.gif)
 
+[![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/decryptable/all-downloader/main?style=flat-square&label=all-downloader)](https://www.npmjs.com/package/all-downloader)
+[![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/decryptable/all-downloader?style=flat-square)](https://github.com/decryptable/all-downloader/issues)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/decryptable/all-downloader/.github%2Fworkflows%2Fpublish.yaml?branch=main&style=flat-square&label=NPM%20Publish%20Status)](https://github.com/decryptable/all-downloader/actions/workflows/publish.yaml)
+![NPM Last Update](https://img.shields.io/npm/last-update/all-downloader?style=flat-square&label=NPM%20Last%20Update)
+
 A simple library for downloading video metadata from various popular platforms such as YouTube, Instagram, Facebook, TikTok, and Vimeo using the SnapDownloader API.
 
 ---

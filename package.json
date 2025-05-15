@@ -1,16 +1,13 @@
 {
   "name": "all-downloader",
-  "version": "1.0.0-alpha",
+  "version": "1.0.1-alpha",
   "files": [
     "dist/",
     "README.md",
     "examples/"
   ],
-  "publishConfig": {
-    
-  },
   "description": "Download your favorite videos from online websites with ease",
-  "homepage": "https://github.com/decryptable/all-downloader#README.md",
+  "homepage": "https://decryptable.github.io/all-downloader/",
   "author": {
     "name": "decryptable",
     "email": "hello@decryptable.dev",
