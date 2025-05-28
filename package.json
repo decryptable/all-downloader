@@ -1,6 +1,6 @@
 {
   "name": "all-downloader",
-  "version": "1.0.1-alpha",
+  "version": "1.0.2-alpha",
   "files": [
     "dist/",
     "README.md",
@@ -40,18 +40,15 @@
   ],
   "license": "UNLICENSED",
   "type": "module",
-  "main": "./dist/index.js",
-  "module": "./dist/esm/index.js",
-  "browser": "./dist/iife/index.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
-    "import": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    },
-    "require": {
-      "types": "./dist/index.d.cts",
-      "require": "./dist/index.cjs"
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.iife.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "scripts": {

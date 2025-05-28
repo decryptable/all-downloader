@@ -8,7 +8,7 @@
   "out": "docs",
   "tsconfig": "tsconfig.json",
   "entryPointStrategy": "expand",
-  "readme": "README.md",
+  "readme": "npmjs.md",
   "jsDocCompatibility": true,
   "titleLink": "https://github.com/decryptable/all-downloader",
   "cleanOutputDir": true,
