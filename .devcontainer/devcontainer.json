@@ -1,0 +1,9 @@
+{
+  "name": "all-downloader-codespace",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainer-community/devcontainer-features/bun.sh:1": {},
+    "ghcr.io/devcontainers-extra/features/zsh-plugins:0": {},
+    "ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {}
+  }
+}
